@@ -1,0 +1,265 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Hanken Grotesk', sans-serif;;
+}
+
+:root{
+  --clr-ligth-red: hsl(0, 100%, 67%);
+  --clr-orangey-yellow: hsl(39, 100%, 56%);
+  --clr-green-teal: hsl(166, 100%, 37%);
+  --clr-cobalt-blue: hsl(234, 85%, 45%);
+  
+  --grd-bg: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+  --grd-circle: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+
+  --clr-pale-blue: hsl(221, 100%, 96%);
+  --clr-ligth-lav: hsl(241, 100%, 89%);
+  --clr-dark-blue: hsl(224, 30%, 27%);
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  width: 650px;
+  height: 450px;
+  margin-top: 100px;
+  overflow: hidden;
+  box-shadow: 10px 15px 20px var(--clr-pale-blue);
+  border-radius: 30px;
+}
+
+
+.result{
+  width: 325px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--grd-bg);
+  border-radius: 30px;
+  padding: 0 40px;
+}
+
+.result--title{
+  color: var(--clr-pale-blue);
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+.score{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: var(--grd-circle);
+  margin-top: 30px;
+}
+
+.current-score{
+  color: white;
+  font-size: 4em;
+}
+
+.max-score{
+  color: var(--clr-ligth-lav);
+}
+
+.result--subtitle{
+  color: white;
+  font-size: 1.7em;
+  margin-top: 30px;
+}
+
+.result--text{
+  color: var(--clr-ligth-lav);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.summary{
+  width: 325px;
+  background: white;
+  padding: 20px;
+}
+
+
+.summary--title{
+  font-size: 1.4em;
+  font-weight: var(--fw-extrabold);
+  color: var(--clr-dark-blue);
+  padding-bottom: 25px;
+}
+
+.summary--category{
+  display: flex;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.summary--category:nth-child(2){
+  background:hsla(0, 100%, 67%, 0.075);
+}
+.summary--category:nth-child(3){
+  background:hsla(39, 100%, 56%, 0.072);;
+}
+.summary--category:nth-child(4){
+  background:hsla(166, 100%, 37%, 0.055);
+}
+
+.summary--category:nth-child(5){
+  background:hsla(234, 85%, 45%, 0.062);
+}
+
+.category--reaction{
+  color: var(--clr-ligth-red);
+  font-size: 1.1em;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.category--memory{
+  color: var(--clr-orangey-yellow);
+  font-size: 1.1em;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.category--verbal{
+  color: var(--clr-green-teal);
+  font-size: 1.1em;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.category--visual{
+  color: var(--clr-cobalt-blue);
+  font-size: 1.1em;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.category-score{
+  color: var(--clr-dark-blue);
+}
+
+.max-category-score{
+  color: var(--clr-ligth-lav);
+  padding-left: 10px;
+}
+
+@media (max-width: 700px) {
+  
+  /*GENERAL*/
+  .container{
+    flex-direction: column;
+    margin: 0;
+    height: 730px;
+    width:325px;
+    border-radius: 0;
+  }
+  /*RESULTS*/
+  .result{
+    height: 320px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .result--title{
+    font-size: 1em;
+  }
+
+  .score{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+
+  .current-score{
+    font-size: 3em;
+  }
+
+  .max-score{
+    font-size: .8em;
+  }
+
+  .result--subtitle{
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+
+  .result--text{
+    font-size: .9em;
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  /*SUMMARY*/
+
+  .summary--title{
+    font-size: 1em;
+  }
+
+  .category--reaction{
+    font-size: .9em;
+  }
+  
+  .category--memory{
+    font-size: .9em;
+  }
+  
+  .category--verbal{
+    font-size: .9em;
+  }
+  
+  .category--visual{
+    font-size: .9em;
+  }
+  
+  .category-score{
+    font-size: .9em;
+  }
+  
+  .max-category-score{
+    font-size: .9em;
+  }
+  
+  .icon{
+    width: 17px;
+  }
+}
+
+.summary-btn{
+  font-size: 1.1em;
+  font-weight: var(--fw-medium);
+  width: 100%;
+  border: none;
+  background: var(--clr-dark-blue);
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  margin-top: 15px;
+}
+
+.summary-btn:hover{
+  cursor: pointer;
+}
+
+.summary-btn:active{
+  background: var(--grd-bg);
+}
