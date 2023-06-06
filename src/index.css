@@ -244,6 +244,21 @@ body{
   }
 }
 
+
+@media(max-width: 550px){
+  .container{
+    width: 100%;
+  }
+
+  .result{
+    width: 100%;
+  }
+
+  .summary{
+    width: 100%;
+  }
+}
+
 .summary-btn{
   font-size: 1.1em;
   font-weight: var(--fw-medium);
