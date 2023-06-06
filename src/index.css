@@ -273,8 +273,5 @@ body{
 
 .summary-btn:hover{
   cursor: pointer;
-}
-
-.summary-btn:active{
   background: var(--grd-bg);
 }
